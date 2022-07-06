@@ -1,0 +1,34 @@
+//LeetCode 509.
+//Fibonacci Number
+//f(n) = f(n-1) + f(n-2)
+
+#include<iostream>
+using namespace std;
+
+int fibonacci(int n) {
+
+    if(n == 0) {
+        return 0;
+    }
+
+    if(n == 1) {
+        return 1;
+    }
+
+    int ans = fibonacci(n-1) + fibonacci(n-2);
+
+    return ans;
+
+}
+
+
+int main() {
+    
+    int n;cin>>n;
+
+    int ans = fibonacci(n);
+
+    cout<<ans<<" ";
+    
+    return 0;
+}
