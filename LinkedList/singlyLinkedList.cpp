@@ -83,6 +83,7 @@ void deleteNode(int position, Node* &head, Node* &tail) {
         //memory free
         temp -> next = NULL;
         delete temp;
+        
     } else {
 
         //deleting other nodes
