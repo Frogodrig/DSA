@@ -29,8 +29,8 @@ int findMinimumCost(string str) {
     }
 
     //stack now contains an invalid expression
-    int a = 0; //count of closed brace
-    int b = 0; //count of open brace
+    int a = 0; //count of closed braces
+    int b = 0; //count of open braces
 
     while(!s.empty()) {
         if(s.top() == '{') {
