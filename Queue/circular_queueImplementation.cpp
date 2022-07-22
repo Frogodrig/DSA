@@ -17,7 +17,7 @@ class CircularQueue {
 
         bool enqueue(int value) {
             //if queue is full
-            if((front == 0 && rear == size-1) or (rear = (front-1) % (size-1))) {
+            if((front == 0 && rear == size-1) or (rear == (front-1) % (size-1))) {
                 cout<<"Queue is full";
                 return false;
 
