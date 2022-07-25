@@ -4,6 +4,8 @@
 #include<list>
 using namespace std;
 
+//If the question demands the answer in a sorted order we can always use set (s.insert(u))
+
 void prepareAdjList(unordered_map<int, list<int>> &adjList, vector<pair<int, int>> &edges) {
 
     for(int i=0; i<edges.size(); i++) {
@@ -19,7 +21,7 @@ void bfs(unordered_map<int, list<int>> &adjList, unordered_map<int, bool> &visit
 
     queue<int> q;
     q.push(node);
-    visited[node] = true;
+    visited[node] = 1;
 
     while(!q.empty()) {
         int frontNode = q.front();
