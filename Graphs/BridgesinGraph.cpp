@@ -24,7 +24,7 @@ void dfs(int node, int parent, int &timer, vector<int> &disc, vector<int> &low, 
                 result.push_back(ans);
             }
         }
-        else {
+        else {//node already visited and not a parent
             //Back Edge
             low[node] = min(low[node], disc[neighbour]);
         }
