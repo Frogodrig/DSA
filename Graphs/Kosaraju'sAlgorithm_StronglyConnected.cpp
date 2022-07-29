@@ -52,14 +52,14 @@ int stronglyConnectedComponents(int v, vector<vector<int>> &edges) {
     //Create a transposed graph
     unordered_map<int, list<int>> transpose;
     for(int i=0; i<v; i++) {
-        vis[i] = 0;
+        vis[i] = 0; //resetting the visited array fro next dfs call
         for(auto neighbour: adj[i]) {
             transpose[neighbour].push_back(i);
         }
     }
 
-    //dfs call using above ordering
-    int count = 0; //Number of disconnected components
+    //dfs call using the trasposed ordering
+    int count = 0; //To count the number of components
     while(!st.empty()) {
         int top = st.top();
         st.pop();
