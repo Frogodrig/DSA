@@ -35,7 +35,7 @@ int merge(int *arr, int s, int e) {
             arr[mainArrayIndex++] = first[index1++];
         } else {
             arr[mainArrayIndex++] = second[index2++];
-            inversionCount = inversionCount + (mid-index1);  //if(a[i] > b[j], then a[i+1]...a[n] will also be > b[j] since a and b are sorted)
+            inversionCount = inversionCount + (len1-index1);  //if(a[i] > b[j], then a[i+1]...a[n] will also be > b[j] since a and b are sorted)
         }
     }
 
