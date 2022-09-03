@@ -35,8 +35,8 @@ vector<vector<int>> foursome(vector<int> &v, int sum) {
                     ans.push_back(quad);
 
                     //Removing duplicates of number 3 and 4
-                    while(front < back && v[front] == quad[1]) front++;
-                    while(front < back && v[back] == quad[2]) back--;
+                    while(front < back && v[front] == quad[2]) front++;
+                    while(front < back && v[back] == quad[3]) back--;
                 }
             }
 
